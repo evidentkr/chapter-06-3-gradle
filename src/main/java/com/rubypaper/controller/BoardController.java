@@ -5,11 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import com.rubypaper.domain.Board;
 import com.rubypaper.domain.Member;
@@ -64,7 +60,7 @@ public class BoardController {
 		return "getBoard";
 	}
 
-	@PostMapping("/updateBoard")
+	@PutMapping("/updateBoard")
 	public String updateBoard(@ModelAttribute("member") Member member, Board board) {
 		if (member.getId() == null) {
 			return "redirect:login";

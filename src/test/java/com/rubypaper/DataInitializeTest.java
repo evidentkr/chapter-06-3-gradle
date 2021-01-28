@@ -25,14 +25,14 @@ public class DataInitializeTest {
 		Member member1 = new Member();
 		member1.setId("member1");
 		member1.setName("둘리");
-		member1.setPassword("member111");
+		member1.setPassword("member123");
 		member1.setRole("ROLE_USER");
 		memberRepo.save(member1);
 
 		Member member2 = new Member();
-		member2.setId("member2");
+		member2.setId("manager1");
 		member2.setName("도우너");
-		member2.setPassword("member222");
+		member2.setPassword("manager123");
 		member2.setRole("ROLE_ADMIN");
 		memberRepo.save(member2);
 
