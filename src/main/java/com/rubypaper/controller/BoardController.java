@@ -60,7 +60,7 @@ public class BoardController {
 		return "getBoard";
 	}
 
-	@PutMapping("/updateBoard")
+	@PostMapping("/updateBoard")
 	public String updateBoard(@ModelAttribute("member") Member member, Board board) {
 		if (member.getId() == null) {
 			return "redirect:login";
